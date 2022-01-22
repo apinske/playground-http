@@ -31,3 +31,4 @@ when the json doc is fully read.
 * JDK-HttpClient `hurry()` may leave unread bytes in the stream, which is probably okay, as close() was called prematurely.
 * Jackson bz default calls `close()` prematurely, having not read all input.
 * Spring provides Jackson in its default configuration on top of JDK-HttpClient.
+    * Spring has its own feature to drain http streams, and should probably not rely on Jackson closing the stream.
