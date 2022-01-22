@@ -1,5 +1,5 @@
 # playground-http
-Reproduces an issue regarding https connection reuse (keep-alive) when using jackson unmarshaller, chunked transfer encoding and RestTemplate in default configuration.
+Reproduces an issue regarding https connection reuse (keep-alive) when using jackson unmarshaller, chunked transfer encoding and RestTemplate. The connections are not reused, which leads to more TLS handshakes for subsequent calls.
 
 ## Running
 * `./runServer.sh`
